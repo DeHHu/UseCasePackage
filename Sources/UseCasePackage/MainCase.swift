@@ -13,6 +13,9 @@ public protocol MainCase {
 }
 
 public struct MainCaseImpl: MainCase {
+	
+	public init(){}
+	
 	public func getMainText(id: String, completion: @escaping (Result<ProductModel, Error>) -> Void) {
 		let repo: ProductsRepository = ProductsRepositoryImpl()
 		repo.product(by: id) { result in
