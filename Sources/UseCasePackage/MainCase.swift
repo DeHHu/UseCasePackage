@@ -12,7 +12,7 @@ public protocol MainCase {
 	func getMainText(id: String, completion: @escaping (Result<ProductModel, Error>) -> Void)
 }
 
-public struct MainCaseImpl: MainCase {
+public class MainCaseImpl: MainCase {
 	
 	public init(){}
 	
