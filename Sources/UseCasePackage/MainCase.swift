@@ -34,9 +34,8 @@ public class MainCaseImpl: MainCase {
 	}
 	
 	public func getMainTextWithFuture(id: String) -> Future<ProductModel, Error> {
-		
+		let repo: ProductsRepository = ProductsRepositoryImpl()
 		return Future<ProductModel, Error> { promise in
-			let repo: ProductsRepository = ProductsRepositoryImpl()
 			repo.product(by: id) { result in
 				switch result {
 					case .success(let success):
